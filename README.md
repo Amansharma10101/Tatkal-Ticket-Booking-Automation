@@ -1,6 +1,6 @@
 # 🚂 IRCTC Ticket Booking Automation
 
-A **TypeScript-based automation tool** that automates the complete IRCTC train ticket booking process.
+A **Node.js automation tool** that automates the complete IRCTC train ticket booking process.
 
 ## ✨ What It Does
 
@@ -8,11 +8,11 @@ A **TypeScript-based automation tool** that automates the complete IRCTC train t
 - **Generates PDF tickets** for all passengers automatically
 - **Sends WhatsApp notifications** with booking confirmations
 - **Handles multiple passengers** in a single booking
-- **Built with modern technologies** (TypeScript, Puppeteer, PDFKit)
+- **Built with modern technologies** (JavaScript, Puppeteer, PDFKit)
 
 ## 🛠️ Technologies Used
 
-- **TypeScript** - Type-safe JavaScript
+- **JavaScript (Node.js)**
 - **Puppeteer** - Browser automation
 - **PDFKit** - PDF generation
 - **Winston** - Logging
@@ -48,7 +48,7 @@ CARD_HOLDER_NAME=Your Name
 
 ### 3. Run the Automation
 ```bash
-npm run dev
+npm start
 ```
 
 ## 📁 Project Structure
@@ -57,9 +57,8 @@ npm run dev
 src/
 ├── config/          # Configuration management
 ├── services/        # Core automation services
-├── types/           # TypeScript interfaces
 ├── utils/           # Utilities (logging)
-└── index.ts         # Main entry point
+└── index.js         # Main entry point
 ```
 
 ## 🔄 How It Works
@@ -77,11 +76,9 @@ src/
 
 ## 📊 Available Scripts
 
-- `npm run dev` - Run in development mode
-- `npm run build` - Build TypeScript to JavaScript
-- `npm start` - Run the built application
-- `npm test` - Run tests
+- `npm start` - Run the application
 - `npm run lint` - Run ESLint
+- `npm run format` - Run Prettier
 
 ## ⚠️ Important Notes
 

@@ -1,31 +1,24 @@
 // ============================================================================
-// MAIN ENTRY POINT - IRCTC Ticket Booking Automation
+// MAIN ENTRY POINT - IRCTC Ticket Booking Automation (JavaScript)
 // ============================================================================
 
-import { config } from './config';
-import { IRCTCAutomationService } from './services/IRCTCAutomationService';
-import { logger } from './utils/logger';
+require('dotenv').config();
+const { config } = require('./config');
+const { IRCTCAutomationService } = require('./services/IRCTCAutomationService');
 
-/**
- * Main function - Entry point of the application
- * This demonstrates the complete automation workflow
- */
-async function main(): Promise<void> {
+async function main() {
   try {
     console.log('🚂 IRCTC Ticket Booking Automation');
     console.log('====================================');
     
-    // Get configuration
     const appConfig = config.getConfig();
     
-    // Display journey details
     console.log(`\n📋 Journey Details:`);
     console.log(`   From: ${appConfig.journey.from}`);
     console.log(`   To: ${appConfig.journey.to}`);
     console.log(`   Date: ${appConfig.journey.date}`);
     console.log(`   Passengers: ${appConfig.journey.passengers.length}`);
     
-    // Create and run automation
     const automation = new IRCTCAutomationService(appConfig);
     await automation.executeBooking();
     
@@ -38,5 +31,4 @@ async function main(): Promise<void> {
   }
 }
 
-// Start the application
 main(); 

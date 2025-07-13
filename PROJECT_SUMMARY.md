@@ -4,12 +4,12 @@
 
 **What it does**: Automates the complete IRCTC train ticket booking process using browser automation, generates PDF tickets, and sends WhatsApp notifications.
 
-**Why it's impressive**: Solves a real-world problem that everyone can relate to (train ticket booking), uses modern technologies, and demonstrates practical programming skills.
+**Why it's impressive**: Solves a real-world problem that everyone can relate to (train ticket booking), uses modern JavaScript technologies, and demonstrates practical programming skills.
 
 ## 🛠️ Technical Stack
 
 ### Core Technologies:
-- **TypeScript** - Modern JavaScript with type safety
+- **JavaScript (Node.js)**
 - **Puppeteer** - Browser automation and web scraping
 - **PDFKit** - PDF generation for e-tickets
 - **Winston** - Professional logging
@@ -18,7 +18,6 @@
 ### Architecture:
 - **Modular Design** - Clean separation of concerns
 - **Service-Oriented** - Each service handles specific functionality
-- **Type Safety** - Full TypeScript interfaces
 - **Error Handling** - Robust error management
 
 ## 🎯 Perfect for Resume/Interviews
@@ -26,7 +25,7 @@
 ### Why This Project Stands Out:
 
 1. **Real-World Problem**: Everyone understands train booking
-2. **Modern Tech Stack**: TypeScript, automation, APIs
+2. **Modern Tech Stack**: JavaScript, automation, APIs
 3. **Practical Skills**: Web scraping, PDF generation, notifications
 4. **Clean Code**: Well-structured, documented, maintainable
 5. **Portfolio-Worthy**: Complex enough to impress, simple enough to explain
@@ -34,7 +33,7 @@
 ### Skills Demonstrated:
 
 ✅ **Web Automation** - Puppeteer browser control  
-✅ **TypeScript** - Modern JavaScript with types  
+✅ **JavaScript (Node.js)**  
 ✅ **API Integration** - WhatsApp Web API  
 ✅ **PDF Generation** - Document creation  
 ✅ **Error Handling** - Robust error management  
@@ -47,54 +46,52 @@
 ```
 src/
 ├── config/          # Configuration management
-│   └── index.ts    # Loads environment variables
+│   └── index.js    # Loads environment variables
 ├── services/        # Core business logic
-│   ├── BrowserService.ts     # Browser automation
-│   ├── PDFService.ts         # PDF generation
-│   ├── WhatsAppService.ts    # WhatsApp notifications
-│   └── IRCTCAutomationService.ts # Main orchestration
-├── types/           # TypeScript interfaces
-│   └── index.ts    # Type definitions
+│   ├── BrowserService.js     # Browser automation
+│   ├── PDFService.js         # PDF generation
+│   ├── WhatsAppService.js    # WhatsApp notifications
+│   └── IRCTCAutomationService.js # Main orchestration
 ├── utils/           # Utilities
-│   └── logger.ts    # Logging functionality
-└── index.ts         # Main entry point
+│   └── logger.js    # Logging functionality
+└── index.js         # Main entry point
 ```
 
 ## 🔄 How It Works (Step-by-Step)
 
 ### 1. **Browser Initialization**
-```typescript
+```js
 // Launches Chrome browser with Puppeteer
 await browserService.initialize();
 ```
 
 ### 2. **Website Navigation**
-```typescript
+```js
 // Navigates to IRCTC train search page
 await browserService.navigateTo('https://www.irctc.co.in/nget/train-search');
 ```
 
 ### 3. **Train Search**
-```typescript
+```js
 // Fills journey details and searches for trains
 await browserService.typeText('input[selector]', 'NEW DELHI - NDLS');
 ```
 
 ### 4. **Train Selection**
-```typescript
+```js
 // Selects first available train and proceeds to booking
 await browserService.waitAndClick('train-selector');
 ```
 
 ### 5. **Login Process**
-```typescript
+```js
 // Authenticates with IRCTC credentials
 await browserService.typeText('#userId', userId);
 await browserService.typeText('#pwd', password);
 ```
 
 ### 6. **Passenger Details**
-```typescript
+```js
 // Fills passenger information for all travelers
 for (const passenger of passengers) {
   await fillPassengerDetails(passenger);
@@ -102,25 +99,25 @@ for (const passenger of passengers) {
 ```
 
 ### 7. **Contact Information**
-```typescript
+```js
 // Fills contact and address details
 await browserService.typeText('input[formcontrolname="mobileNumber"]', contact);
 ```
 
 ### 8. **Payment Processing**
-```typescript
+```js
 // Navigates to payment and fills card details
 await browserService.typeText('.userCardNumber', cardNumber);
 ```
 
 ### 9. **PDF Generation**
-```typescript
+```js
 // Creates professional PDF tickets
 await pdfService.generateTicket(ticketData);
 ```
 
 ### 10. **WhatsApp Notifications**
-```typescript
+```js
 // Sends booking confirmations via WhatsApp
 await whatsappService.sendNotification(passengerName, fromStation, toStation);
 ```
@@ -143,7 +140,7 @@ await whatsappService.sendNotification(passengerName, fromStation, toStation);
 - Reduces booking time from 15 minutes to 2 minutes
 
 **Technical Implementation**:
-- Used TypeScript for type safety and better development experience
+- Used JavaScript (Node.js) for development
 - Implemented browser automation with Puppeteer for web scraping
 - Created PDF generation with PDFKit for professional e-tickets
 - Integrated WhatsApp Web API for notifications
@@ -154,13 +151,13 @@ await whatsappService.sendNotification(passengerName, fromStation, toStation);
 - Web automation and scraping techniques
 - Real-world API integration
 - PDF document generation
-- Modern JavaScript/TypeScript practices
+- Modern JavaScript practices
 - Error handling and logging best practices
 
 ## 📊 Resume Bullet Points
 
 ### Technical Skills:
-- **Developed automated IRCTC ticket booking system** using TypeScript and Puppeteer
+- **Developed automated IRCTC ticket booking system** using JavaScript and Puppeteer
 - **Implemented PDF generation** for e-tickets with professional formatting
 - **Integrated WhatsApp API** for automated booking confirmations
 - **Built modular architecture** with clean separation of concerns
@@ -181,7 +178,7 @@ await whatsappService.sendNotification(passengerName, fromStation, toStation);
 "I built an automation tool that handles the entire process, from searching trains to generating tickets and sending confirmations."
 
 ### 3. **Highlight Technical Skills**
-"I used TypeScript for type safety, Puppeteer for browser automation, and integrated multiple APIs for a complete solution."
+"I used JavaScript (Node.js) for development, Puppeteer for browser automation, and integrated multiple APIs for a complete solution."
 
 ### 4. **Show Results**
 "The tool reduces booking time from 15 minutes to 2 minutes and handles multiple passengers automatically."
